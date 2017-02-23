@@ -3,6 +3,10 @@ import java.io.*;
 public class Mario {
 
 	public static void main(String[] args) {
-		Pyramid.createPyramid(Integer.parseInt(Pyramid.height()), Pyramid.cslOrTxt());
+		Pyramid.getInstance().cslOrTxt();
+		Pyramid.getInstance().height();
+		String cslOrTxt = Pyramid.getInstance().cslOrTxt;
+		int h = Pyramid.getInstance().h;
+		Pyramid.createPyramid(h, cslOrTxt);
 		}
 	}

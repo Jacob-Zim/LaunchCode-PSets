@@ -4,6 +4,16 @@ import java.util.Scanner;
 public class Pyramid {
 	String cslOrTxt;
 	int h;
+	private Pyramid() {}
+	
+	private static Pyramid pyramid;
+	
+	public static Pyramid getInstance() {
+		if (pyramid == null) {
+			pyramid = new Pyramid();
+		}
+		return pyramid;
+	}
 	public static void createPyramid(int h, String cslOrTxt){
 		String[] lines = new String[h];
 		char[] line = new char[h+1];
@@ -37,7 +47,7 @@ public class Pyramid {
 			}
 		}
 	}
-	public static String cslOrTxt(){
+	public void cslOrTxt(){
 		Scanner s = new Scanner(System.in);
 		String cslOrTxt;
 		while (true) {
@@ -49,15 +59,15 @@ public class Pyramid {
 				continue;
 			} else break;
 		}
-		return cslOrTxt;
+		this.cslOrTxt = cslOrTxt;
 	}
-	public static String height(){
+	public void height(){
 		Scanner s = new Scanner(System.in);
 		int height = 0;
 		do {
 			  System.out.println("Enter a height within 0 and 23");
 			  height = s.nextInt();
 			} while (height < 0 || height > 23);
-		return Integer.toString(height);
+		h = height;
 	}
 }
