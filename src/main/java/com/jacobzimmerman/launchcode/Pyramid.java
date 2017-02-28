@@ -1,6 +1,6 @@
+package src.main.java.com.jacobzimmerman.launchcode;
 import java.io.PrintWriter;
 import java.util.Scanner;
-
 public class Pyramid {
 	String cslOrTxt;
 	int h;

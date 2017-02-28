@@ -1,3 +1,4 @@
+package src.main.java.com.jacobzimmerman.launchcode;
 import java.util.Scanner;
 import java.io.*;
 public class Mario {
